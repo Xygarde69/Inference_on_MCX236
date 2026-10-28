@@ -1,0 +1,11 @@
+# West workspace + fetched SDK (reproduce with: uv run west update)
+.west/
+mcuxsdk/
+mcuxsdk-manifests/
+
+# Python (uv)
+.venv/
+
+# Build output
+build/
+servo/build*/

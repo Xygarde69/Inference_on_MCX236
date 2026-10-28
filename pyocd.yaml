@@ -1,0 +1,2 @@
+# pyOCD project config (read automatically from the repo root)
+target_override: mcxn236vdf

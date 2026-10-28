@@ -1,0 +1,19 @@
+# West manifest: pulls only the MCUXpresso SDK pieces needed for FRDM-MCXN236.
+manifest:
+  remotes:
+    - name: nxp-mcuxpresso
+      url-base: https://github.com/nxp-mcuxpresso
+  projects:
+    - name: mcuxsdk-manifests
+      remote: nxp-mcuxpresso
+      revision: v26.09.00
+      import:
+        name-allowlist:
+          - core
+          - CMSIS
+          - mcuxsdk-tool-data
+          - mcu-sdk-components
+          - mcu-sdk-examples
+          - mcux-devices-mcx
+  self:
+    path: manifest

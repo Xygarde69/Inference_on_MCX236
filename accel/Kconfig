@@ -1,0 +1,13 @@
+menu "Accelerometer Settings"
+
+config ACCEL_SAMPLE_PERIOD_MS
+    int "Time between printed samples (ms)"
+    default 100
+    range 10 10000
+    help
+        No prefix in generated macro
+        type unsigned
+
+endmenu
+
+source "${SdkRootDirPath}/Kconfig.mcuxpresso"
