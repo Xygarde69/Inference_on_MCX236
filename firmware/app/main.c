@@ -6,7 +6,7 @@
 #include "policy_model.h"
 #include "tilt.h"
 
-/* Frame protocol, little-endian (see host/nxp_policy.py):
+/* Frame protocol, little-endian (see test/board.py):
  *   PC -> board  0xA5 cmd payload xor
  *   board -> PC  0x5A cmd payload xor
  * xor covers cmd and payload. */
@@ -168,7 +168,7 @@ int main(void)
     PRINTF("\r\nOnePolicy on FRDM-MCXN236: %u -> %u MLP, model 0x%08X, core %u MHz\r\n", POLICY_N_OBS,
            POLICY_N_ACT, POLICY_MODEL_CRC, SystemCoreClock / 1000000U);
     PRINTF("Tilt command: %s\r\n", s_accel_ok ? "FXLS8974CF ready" : "accelerometer not found, command stays 0");
-    PRINTF("Waiting for observations (host/play_nxp.py)\r\n");
+    PRINTF("Waiting for observations (test/run.py)\r\n");
 
     while (1)
     {

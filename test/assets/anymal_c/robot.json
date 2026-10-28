@@ -1,0 +1,163 @@
+{
+  "source": "OnePolicy play.py --robot anymal_c_xknee (flat task, play mode, nominal: no startup randomisation)",
+  "joint_names": [
+    "FR_hip_joint",
+    "FR_thigh_joint",
+    "FR_calf_joint",
+    "FL_hip_joint",
+    "FL_thigh_joint",
+    "FL_calf_joint",
+    "RR_hip_joint",
+    "RR_thigh_joint",
+    "RR_calf_joint",
+    "RL_hip_joint",
+    "RL_thigh_joint",
+    "RL_calf_joint"
+  ],
+  "default_joint_pos": [
+    0.10000000149011612,
+    0.8999999761581421,
+    -1.7999999523162842,
+    -0.10000000149011612,
+    0.8999999761581421,
+    -1.7999999523162842,
+    0.10000000149011612,
+    -0.8999999761581421,
+    1.7999999523162842,
+    -0.10000000149011612,
+    -0.8999999761581421,
+    1.7999999523162842
+  ],
+  "action_scale": 0.25,
+  "actuators": [
+    {
+      "joint": "FR_hip_joint",
+      "ctrl": 0,
+      "kp": 87.44795227050781,
+      "kd": 5.3167805671691895,
+      "effort_limit": 102.7513427734375,
+      "saturation_effort": 102.7513427734375,
+      "velocity_limit": 18.84955596923828
+    },
+    {
+      "joint": "FR_thigh_joint",
+      "ctrl": 4,
+      "kp": 87.44795227050781,
+      "kd": 5.3167805671691895,
+      "effort_limit": 102.7513427734375,
+      "saturation_effort": 102.7513427734375,
+      "velocity_limit": 18.84955596923828
+    },
+    {
+      "joint": "FR_calf_joint",
+      "ctrl": 8,
+      "kp": 174.89590454101562,
+      "kd": 10.633561134338379,
+      "effort_limit": 196.7578887939453,
+      "saturation_effort": 196.7578887939453,
+      "velocity_limit": 18.84955596923828
+    },
+    {
+      "joint": "FL_hip_joint",
+      "ctrl": 1,
+      "kp": 87.44795227050781,
+      "kd": 5.3167805671691895,
+      "effort_limit": 102.7513427734375,
+      "saturation_effort": 102.7513427734375,
+      "velocity_limit": 18.84955596923828
+    },
+    {
+      "joint": "FL_thigh_joint",
+      "ctrl": 5,
+      "kp": 87.44795227050781,
+      "kd": 5.3167805671691895,
+      "effort_limit": 102.7513427734375,
+      "saturation_effort": 102.7513427734375,
+      "velocity_limit": 18.84955596923828
+    },
+    {
+      "joint": "FL_calf_joint",
+      "ctrl": 9,
+      "kp": 174.89590454101562,
+      "kd": 10.633561134338379,
+      "effort_limit": 196.7578887939453,
+      "saturation_effort": 196.7578887939453,
+      "velocity_limit": 18.84955596923828
+    },
+    {
+      "joint": "RR_hip_joint",
+      "ctrl": 2,
+      "kp": 87.44795227050781,
+      "kd": 5.3167805671691895,
+      "effort_limit": 102.7513427734375,
+      "saturation_effort": 102.7513427734375,
+      "velocity_limit": 18.84955596923828
+    },
+    {
+      "joint": "RR_thigh_joint",
+      "ctrl": 6,
+      "kp": 87.44795227050781,
+      "kd": 5.3167805671691895,
+      "effort_limit": 102.7513427734375,
+      "saturation_effort": 102.7513427734375,
+      "velocity_limit": 18.84955596923828
+    },
+    {
+      "joint": "RR_calf_joint",
+      "ctrl": 10,
+      "kp": 174.89590454101562,
+      "kd": 10.633561134338379,
+      "effort_limit": 196.7578887939453,
+      "saturation_effort": 196.7578887939453,
+      "velocity_limit": 18.84955596923828
+    },
+    {
+      "joint": "RL_hip_joint",
+      "ctrl": 3,
+      "kp": 87.44795227050781,
+      "kd": 5.3167805671691895,
+      "effort_limit": 102.7513427734375,
+      "saturation_effort": 102.7513427734375,
+      "velocity_limit": 18.84955596923828
+    },
+    {
+      "joint": "RL_thigh_joint",
+      "ctrl": 7,
+      "kp": 87.44795227050781,
+      "kd": 5.3167805671691895,
+      "effort_limit": 102.7513427734375,
+      "saturation_effort": 102.7513427734375,
+      "velocity_limit": 18.84955596923828
+    },
+    {
+      "joint": "RL_calf_joint",
+      "ctrl": 11,
+      "kp": 174.89590454101562,
+      "kd": 10.633561134338379,
+      "effort_limit": 196.7578887939453,
+      "saturation_effort": 196.7578887939453,
+      "velocity_limit": 18.84955596923828
+    }
+  ],
+  "length_scale": 1.478625774383545,
+  "mass_scale": 2.9570682048797607,
+  "phase_period_go2": 0.6,
+  "command_ranges_go2": {
+    "forward": [
+      -0.5,
+      1.0
+    ],
+    "left": [
+      -0.5,
+      0.5
+    ],
+    "yaw": [
+      -0.5,
+      0.5
+    ]
+  },
+  "timestep": 0.005,
+  "decimation": 4,
+  "base_body": "robot/base_link",
+  "gyro_sensor": "robot/imu_ang_vel"
+}

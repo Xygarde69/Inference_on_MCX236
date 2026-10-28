@@ -1,6 +1,6 @@
-# OnePolicy actor inference for FRDM-MCXN236 (freestanding MCUXpresso SDK project).
-# Export the model first (host/nxp_policy.py export writes model/policy_model.[ch]),
-# then build from the repo root:  uv run west build -p always policy -b frdmmcxn236 -d build_policy --config release
+# OnePolicy inference + tilt command for FRDM-MCXN236 (freestanding MCUXpresso SDK project).
+# The weights come from ../policy (policy/export.py writes policy_model.[ch] from the ONNX).
+# Build from firmware/:  uv run west build -p always app -b frdmmcxn236 -d build --config release
 
 cmake_minimum_required(VERSION 3.22.0)
 
@@ -16,8 +16,8 @@ mcux_add_source(
             policy_net.h
             tilt.c
             tilt.h
-            model/policy_model.c
-            model/policy_model.h
+            ../policy/policy_model.c
+            ../policy/policy_model.h
             board/hardware_init.c
             board/app.h
             board/pin_mux.c
@@ -26,7 +26,7 @@ mcux_add_source(
 
 mcux_add_include(
     INCLUDES .
-             model
+             ../policy
              board
 )
 
