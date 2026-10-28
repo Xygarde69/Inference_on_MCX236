@@ -1,0 +1,81 @@
+menu "Policy Settings"
+
+config BOARD_DEBUG_UART_BAUDRATE
+    int "Baud rate of the policy link (debug console UART, MCU-Link VCOM)"
+    default 921600
+    range 9600 3000000
+    help
+        No prefix in generated macro
+        type unsigned
+
+endmenu
+
+menu "Tilt Command"
+
+config TILT_FORWARD_AXIS
+    int "Accelerometer axis that points forward (0 = X, 1 = Y; the other one is left)"
+    default 0
+    range 0 1
+    help
+        No prefix in generated macro
+        type unsigned
+
+config TILT_FORWARD_SIGN
+    int "1: dipping the +forward-axis edge walks forward; -1: dipping the - edge does"
+    default 1
+    range -1 1
+    help
+        No prefix in generated macro
+
+config TILT_LEFT_SIGN
+    int "1: dipping the +left-axis edge walks left; -1: dipping the - edge does"
+    default 1
+    range -1 1
+    help
+        No prefix in generated macro
+
+config TILT_DEADZONE_DEG
+    int "Tilt below this angle commands nothing (deg)"
+    default 5
+    range 0 45
+    help
+        No prefix in generated macro
+
+config TILT_FULL_DEG
+    int "Tilt that commands full speed (deg)"
+    default 25
+    range 5 80
+    help
+        No prefix in generated macro
+
+config TILT_MAX_FORWARD_MMS
+    int "Full-tilt forward speed (Go2 mm/s, scaled to the robot)"
+    default 1000
+    range 0 2000
+    help
+        No prefix in generated macro
+
+config TILT_MAX_BACKWARD_MMS
+    int "Full-tilt backward speed (Go2 mm/s)"
+    default 500
+    range 0 1000
+    help
+        No prefix in generated macro
+
+config TILT_MAX_LATERAL_MMS
+    int "Full-tilt sideways speed (Go2 mm/s)"
+    default 500
+    range 0 1000
+    help
+        No prefix in generated macro
+
+config TILT_SMOOTHING_PCT
+    int "Low-pass: percent of the way to the new command each 20 ms step"
+    default 20
+    range 1 100
+    help
+        No prefix in generated macro
+
+endmenu
+
+source "${SdkRootDirPath}/Kconfig.mcuxpresso"

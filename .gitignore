@@ -7,5 +7,9 @@ mcuxsdk-manifests/
 .venv/
 
 # Build output
-build/
+build*/
 servo/build*/
+
+# Host scripts
+__pycache__/
+MUJOCO_LOG.TXT
